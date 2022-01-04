@@ -4,9 +4,13 @@ from blogging.models import Post, Category
 # admin.site.register(Post)
 # admin.site.register(Category)
 
-class CategoryInline(admin.StackedInline):
-    model = Category
-    #exclude = ('posts',)
+# class CategoryInline(admin.StackedInline):
+#     model = Category
+#     #exclude = ('posts',)
+
+class CategoryInline(admin.TabularInline):
+    model = Category.posts.through
+
 
 class PostAdmin(admin.ModelAdmin):
     inlines = [
