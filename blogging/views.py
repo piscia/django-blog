@@ -6,13 +6,17 @@ from django.views.generic.detail import DetailView
 
 from blogging.models import Post
 
+
 class BlogListView(ListView):
-    queryset = Post.objects.exclude(published_date__exact=None).order_by('-published_date')
-    template_name = 'blogging/list.html'
+    queryset = Post.objects.exclude(published_date__exact=None).order_by(
+        "-published_date"
+    )
+    template_name = "blogging/list.html"
+
 
 class BlogDetailView(DetailView):
     model = Post
-    template_name = 'blogging/detail.html'
+    template_name = "blogging/detail.html"
 
 
 ###Old code for lesson 07###
@@ -44,4 +48,3 @@ class BlogDetailView(DetailView):
 #         raise Http404
 #     context = {'post': post}
 #     return render(request, 'blogging/detail.html', context)
-
