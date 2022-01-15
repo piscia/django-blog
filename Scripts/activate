@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Joe\AppData\Local\Programs\Python\Python39\Scripts\Python330\lesson-06-assignment-piscia\mysite"
+VIRTUAL_ENV="C:\Users\Joe\AppData\Local\Programs\Python\Python39\Scripts\python330\lesson-06-assignment-piscia\mysite"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
